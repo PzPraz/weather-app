@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+html,
+body {
+  height: 100%;
+  font-family: "Roboto";
+  background-color: #eaeaea;
+}
+
+#content {
+  width: 70%;
+  margin: 0 auto;
+  height: 100%;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 0.5rem;
+  padding: 0.2rem 0.3rem;
+}
+
+.current-location {
+  margin-top: 1rem;
+  text-align: center;
+}
+
+.weather-info {
+  padding: 0.5rem 2rem;
+}
+
+.temp-status {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.temp-degree {
+  position: relative;
+  bottom: -2.2rem;
+  font-size: 2rem;
+}
+
+.temp {
+  font-size: 7rem;
+}
+
+.weather-status {
+  text-align: center;
+}
+
+.general-info {
+  margin-top: 2rem;
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 200px 200px;
+}
+
+.general-info div {
+  text-align: center;
+}
+
+.weather-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.sunrise-time-info,
+.humidity-info,
+.sunset-time-info,
+.temp-feelslike-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

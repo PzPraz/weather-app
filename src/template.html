@@ -1,11 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div id="content">
+      <input type="text" class="search-bar" placeholder="Enter your city" />
+      <div class="location-info"><h1 class="current-location"></h1></div>
+
+      <div class="weather-info">
+        <div class="temp-status">
+          <div class="temp">27</div>
+          <div class="temp-degree"><strong>°C</strong></div>
+        </div>
+        <div class="weather-status">
+          <div class="weather-status-pic"></div>
+          <div class="weather-status-desc"></div>
+        </div>
+      </div>
+      <div class="general-info">
+        <div class="sunrise-time-info">
+          <div class="sunrise-pic">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M4 18H2M6.31412 12.3141L4.8999 10.8999M17.6858 12.3141L19.1 10.8999M22 18H20M7 18C7 15.2386 9.23858 13 12 13C14.7614 13 17 15.2386 17 18M22 22H2M16 6L12 2M12 2L8 6M12 2V9"
+                  stroke="#000000"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <span>Sunrise</span>
+          <div class="sunrise-time"></div>
+        </div>
+        <div class="humidity-info">
+          <div class="humidity-pic">
+            <svg
+              fill="#000000"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M12,22c2.579,0,4-1.35,4-3.8,0-3.243-3.237-5.871-3.375-5.981a1,1,0,0,0-1.25,0C11.237,12.329,8,14.957,8,18.2,8,20.65,9.421,22,12,22Zm0-7.639A6.153,6.153,0,0,1,14,18.2c0,1.112-.335,1.8-2,1.8s-2-.688-2-1.8A6.153,6.153,0,0,1,12,14.361ZM6.625,2.219a1,1,0,0,0-1.25,0C5.237,2.329,2,4.957,2,8.2,2,10.65,3.421,12,6,12s4-1.35,4-3.8C10,4.957,6.763,2.329,6.625,2.219ZM6,10c-1.665,0-2-.688-2-1.8A6.153,6.153,0,0,1,6,4.361,6.153,6.153,0,0,1,8,8.2C8,9.312,7.665,10,6,10ZM18.625,2.219a1,1,0,0,0-1.25,0C17.237,2.329,14,4.957,14,8.2c0,2.45,1.421,3.8,4,3.8s4-1.35,4-3.8C22,4.957,18.763,2.329,18.625,2.219ZM18,10c-1.665,0-2-.688-2-1.8a6.153,6.153,0,0,1,2-3.839A6.153,6.153,0,0,1,20,8.2C20,9.312,19.665,10,18,10Z"
+                ></path>
+              </g>
+            </svg>
+          </div>
+          <span>Humidity</span>
+          <div class="humidity-status"></div>
+        </div>
+        <div class="sunset-time-info">
+          <div class="sunset-pic">
+            <div class="sunrise-pic">
+              <svg
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g
+                  id="SVGRepo_tracerCarrier"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                ></g>
+                <g id="SVGRepo_iconCarrier">
+                  <path
+                    d="M4 18H2M6.31412 12.3141L4.8999 10.8999M17.6858 12.3141L19.1 10.8999M22 18H20M7 18C7 15.2386 9.23858 13 12 13C14.7614 13 17 15.2386 17 18M22 22H2M16 6L12 2M12 2L8 6M12 2V9"
+                    stroke="#000000"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  ></path>
+                </g>
+              </svg>
+            </div>
+          </div>
+          <span>Sunset</span>
+          <div class="sunset-time"></div>
+        </div>
+        <div class="temp-feelslike-info">
+          <div class="feelslike-pic">
+            <svg
+              viewBox="0 0 48 48"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="#000000"
+            >
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g
+                id="SVGRepo_tracerCarrier"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></g>
+              <g id="SVGRepo_iconCarrier">
+                <path d="M0 0h48v48H0z" fill="none"></path>
+                <g id="Shopicon">
+                  <path
+                    d="M24,38c2.209,0,4-1.791,4-4c0-1.477-0.809-2.752-2-3.445V16h-4v14.555c-1.191,0.693-2,1.969-2,3.445 C20,36.209,21.791,38,24,38z"
+                  ></path>
+                  <path
+                    d="M24,44c5.514,0,10-4.486,10-10c0-2.171-0.713-4.272-2-5.989V12c0-4.411-3.589-8-8-8s-8,3.589-8,8v16.011 c-1.287,1.717-2,3.818-2,5.989C14,39.514,18.486,44,24,44z M20,29.537V12c0-2.2,1.8-4,4-4s4,1.8,4,4v17.537 c1.225,1.098,2,2.688,2,4.463c0,3.314-2.686,6-6,6s-6-2.686-6-6C18,32.225,18.775,30.635,20,29.537z"
+                  ></path>
+                </g>
+              </g>
+            </svg>
+          </div>
+          <span>Feels Like</span>
+          <div class="temp-feelslike-status"></div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
